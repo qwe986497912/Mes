@@ -111,7 +111,7 @@ import { Provider } from 'react-redux';
 										</Menu.Item>
 						</SubMenu>
 						<SubMenu
-							key="sub11"
+							key="sub30"
 							title={
 								<span>
 									<Icon type="appstore"/>
@@ -119,10 +119,22 @@ import { Provider } from 'react-redux';
 								</span>
 							}
 							>
-								<Menu.Item key="88.1">
-									<Link to="/app/materialManage/InventoryManagement/">
+								<Menu.Item key="30.1">
+									<Link to="/app/materialManage/Inventory/">
 										<Icon type="up"/>
-										订单管理
+										库存
+									</Link>
+								</Menu.Item>
+								<Menu.Item key="30.2">
+									<Link to="/app/materialManage/Materialinout/">
+										<Icon type="up"/>
+										库存台账
+									</Link>
+								</Menu.Item>
+								<Menu.Item key="32.3">
+									<Link to="/app/materialManage/Materialrequirements/">
+										<Icon type="up"/>
+										物料需求管理
 									</Link>
 								</Menu.Item>
 							</SubMenu>

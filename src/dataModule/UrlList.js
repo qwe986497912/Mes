@@ -9,9 +9,9 @@
 // export const originalUrl = 'http://10.41.54.88:8000/api/';
 // export const originalUrl = 'http://localhost:8000/api/';
 // export const originalUrl = 'http://10.21.1.165:8000/';
-// export const originalUrl = 'http://212.64.4.130:9000/';
+export const originalUrl = 'http://212.64.4.130:9000/';
 // export const originalUrl = 'http://10.41.54.88:8000/';
-export const originalUrl = 'http://192.168.1.119:9000/';
+// export const originalUrl = 'http://192.168.1.119:9000/';
 // export const originalUrl = 'http://10.21.1.58:8000/api/';//innovation space 1
 // 用户 账户信息 账户信息表
 export const userForm = 'user/info/getinfo/';
@@ -42,6 +42,9 @@ export const inputPlan = 'admin/scheduleManage/'; //计划参数输入
 export const orderSchedule = 'admin/orderSchedule/'; //任务安排
 export const progressTrack = 'admin/progressTrack/'; //生产进度追踪
 export const taskTrack = 'admin/taskTrack/'; // 任务追踪
+//物料管理
 export const inventoryManagement = 'admin/inventoryManagement/'; // 库存
+export const materialinout = 'admin/materialinout/';//物料出入库台账表
+export const materialrequirements = 'admin/materialrequirements/';//物料需求管理
 // 后台 所有账户信息
 export const account = 'user/';//MES

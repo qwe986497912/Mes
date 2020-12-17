@@ -25,7 +25,9 @@ import OrderSchedule from '../app/maintain/OrderSchedule.js';//mes
 import ProgressTrack from '../app/maintain/ProgressTrack.js';//mes
 import TaskTrack from '../app/maintain/TaskTrack.js'; //mes
 // 物料管理
-import InventoryManagement from '../app/materialManage/inventoryManagement.js'; //mes
+import InventoryManagement from '../app/materialManage/InventoryManagement.js'; //mes
+import Materialinout from '../app/materialManage/Materialinout.js';//mes
+import Materialrequirements from '../app/materialManage/Materialrequirements.js';//mes
 //机器人服务（用户端） 
 import Personal from '../app/userSide/personal.js';
 import Order from '../app/userSide/order.js';
@@ -87,28 +89,31 @@ class App extends Component {
 			          >
 			            <Switch>
 			 							{/* 主页 */}
-			 						<Route exact path="/app/" component={appIndex}/>
-			 							{/* 后台 机器人服务部分 */}
-			 						<Route exact path="/app/backstage/informationAdmin/AccountInformation/" component={AccountInformation}></Route>
-			 							{/* 运维 订单记录 mes */}
-									<Route exact path="/app/maintain/OrderSchedule/" component={OrderSchedule}/>
-									<Route exact path="/app/maintain/ProgressTrack/" component={ProgressTrack}/>
-			 						<Route exact path="/app/maintain/ordersAdmin/OrdersRecord/" component={OrdersRecord}/>
-									<Route exact path="/app/maintain/InputPlan/" component={InputPlan}/>
-									<Route exact paht="/app/maintain/TaskTrack/" component={TaskTrack}/>
-			 						<Route exact path="/app/maintain/robotManage/RobotManage/" component={RobotManage}/>
-			 						<Route exact path="/app/maintain/robotManage/RobotMaintain/" component={RobotMaintain}/>
-			 						<Route exact path="/app/maintain/robotManage/RobotTransfer/" component={RobotTransfer}/>
-										{/* 物料管理 */}
-									<Route exact path="/app/materialManage/InventoryManagement/" component={InventoryManagement}/>	
-			 							{/* 用户端 */}
-			 						<Route exact path="/app/userSide/Personal/" component={Personal}/>
-			 						<Route exact path="/app/userSide/order/" component={Order}/>
-			 						<Route exact path="/app/userSide/ordersUser/OrderDetails/:orderId/" component={OrderDetails}/>
-			 						<Route exact path="/app/userSide/robotServices/DispatchService/" component={DispatchService}/>
-			 						<Route exact path="/app/userSide/robotServices/WaitToDevelop/" component={WaitToDevelop}/>
-			 						<Route component={noMatch} />
-			 					 </Switch>
+										<Route exact path="/app/" component={appIndex}/>
+											{/* 后台 机器人服务部分 */}
+										<Route exact path="/app/backstage/informationAdmin/AccountInformation/" component={AccountInformation}></Route>
+											{/* 运维 订单记录 mes */}
+										<Route exact path="/app/maintain/OrderSchedule/" component={OrderSchedule}/>
+										<Route exact path="/app/maintain/ProgressTrack/" component={ProgressTrack}/>
+										<Route exact path="/app/maintain/ordersAdmin/OrdersRecord/" component={OrdersRecord}/>
+										<Route exact path="/app/maintain/InputPlan/" component={InputPlan}/>
+										{/* <Route exact paht="/app/maintain/TaskTrack/" component={TaskTrack}/> paht 问题？*/}
+										<Route exact path="/app/maintain/TaskTrack/" component={TaskTrack}/>
+										<Route exact path="/app/maintain/robotManage/RobotManage/" component={RobotManage}/>
+										<Route exact path="/app/maintain/robotManage/RobotMaintain/" component={RobotMaintain}/>
+										<Route exact path="/app/maintain/robotManage/RobotTransfer/" component={RobotTransfer}/>
+											{/* 物料管理 */}
+										<Route exact path="/app/materialManage/Inventory/" component={InventoryManagement}/>	
+										<Route exact path="/app/materialManage/Materialinout/" component={Materialinout}/>
+										<Route exact path="/app/materialManage/Materialrequirements/" component={Materialrequirements}/>
+											{/* 用户端 */}
+										<Route exact path="/app/userSide/Personal/" component={Personal}/>
+										<Route exact path="/app/userSide/order/" component={Order}/>
+										<Route exact path="/app/userSide/ordersUser/OrderDetails/:orderId/" component={OrderDetails}/>
+										<Route exact path="/app/userSide/robotServices/DispatchService/" component={DispatchService}/>
+										<Route exact path="/app/userSide/robotServices/WaitToDevelop/" component={WaitToDevelop}/>
+										<Route component={noMatch} />
+									</Switch>
 			          </Content>
 			 				 <Footer style={{ textAlign: 'center', backgroundColor: "#778899", color: "white" }}>
 			 				 	<span style={{ display: "block" }}>公司地址：上海市杨浦区军工路516号上海理工大学</span>
